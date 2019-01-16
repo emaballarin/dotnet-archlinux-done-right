@@ -1,0 +1,3 @@
+#!/bin/sh
+mono /usr/lib/nuget/nuget.exe $*
+#mono --runtime=v4.0 /usr/lib/nuget/nuget.exe $*
