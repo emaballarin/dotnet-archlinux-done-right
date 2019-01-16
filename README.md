@@ -1,2 +1,2 @@
 # dotnet-archlinux-done-right
-Collection of tweaked and updated PKGBUILDs to install a full .NET Core/Mono development environment
+Collection of tweaked and updated PKGBUILDs to install the freshest (full) .NET Core/Mono development environment available.
