@@ -1,0 +1,4 @@
+#!/bin/sh
+echo "Feature not available for .NET Core."
+echo "Please, use the Mono alternative 'fsharpiAnyCpu-mono'"
+exit
