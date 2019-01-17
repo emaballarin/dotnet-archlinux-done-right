@@ -29,4 +29,4 @@ if test x"$1" = x--valgrind; then
   EXEC="valgrind $VALGRIND_OPTIONS"
 fi
 
-$EXEC $FSHARP_ENGINE_EXECUTABLE $DEBUG $MONO_OPTIONS $FSHARP_EXECUTABLE_FSIAC--exename:$(basename "$0") "$@"
+$EXEC $FSHARP_ENGINE_EXECUTABLE $DEBUG $MONO_OPTIONS $FSHARP_EXECUTABLE_FSIAC --exename:$(basename "$0") "$@"
