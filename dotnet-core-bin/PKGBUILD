@@ -4,17 +4,17 @@
 
 pkgbase=dotnet-core-bin
 pkgname=('dotnet-host-bin' 'dotnet-runtime-bin' 'aspnet-runtime-bin' 'dotnet-sdk-bin')
-pkgver=2.2.2+104
-_pkgver=2.2.2+104
-pkgrel=2
+pkgver=2.2.4+203
+_pkgver=2.2.4+203
+pkgrel=1
 arch=('x86_64')
 url='https://www.microsoft.com/net/core'
 license=('MIT')
 makedepends=('clang' 'cmake' 'curl' 'git' 'icu' 'krb5' 'libunwind' 'lldb' 'llvm' 'lttng-ust' 'openssl' 'zlib')
 options=('staticlibs')
 source=(
-  'https://download.visualstudio.microsoft.com/download/pr/168bba07-32dc-4612-ab01-7632d412c4cd/e1ecbf16d84e504c1d66d7a7573c9171/aspnetcore-runtime-2.2.2-linux-x64.tar.gz'
-  'https://download.visualstudio.microsoft.com/download/pr/69937b49-a877-4ced-81e6-286620b390ab/8ab938cf6f5e83b2221630354160ef21/dotnet-sdk-2.2.104-linux-x64.tar.gz'
+  'https://download.visualstudio.microsoft.com/download/pr/61a33dc2-fc56-4bbe-b564-d232172eb210/d8006a719a3bcc65d2937a909623afcb/aspnetcore-runtime-2.2.4-linux-x64.tar.gz'
+  'https://download.visualstudio.microsoft.com/download/pr/647f8505-3bf0-48c5-ac0f-3839be6816d7/d0c2762ded5a1ded3c79b1e495e43b7c/dotnet-sdk-2.2.203-linux-x64.tar.gz'
   'dotnet.sh'
 )
 sha256sums=('SKIP'
