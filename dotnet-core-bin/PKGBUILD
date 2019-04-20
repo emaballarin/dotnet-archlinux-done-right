@@ -52,7 +52,7 @@ package_aspnet-runtime-bin() {
 
   install -dm 755 "${pkgdir}"/{opt/dotnet/shared,usr/share/licenses}
   cp -dr --no-preserve='ownership' shared/Microsoft.AspNetCore.App "${pkgdir}"/opt/dotnet/shared/
-  cp -dr --no-preserve='ownership' shared/Microsoft.AspNetCore.All "${pkgdir}"/opt/dotnet/shared/
+#  cp -dr --no-preserve='ownership' shared/Microsoft.AspNetCore.All "${pkgdir}"/opt/dotnet/shared/
   ln -s dotnet-host "${pkgdir}"/usr/share/licenses/aspnet-runtime
 }
 
