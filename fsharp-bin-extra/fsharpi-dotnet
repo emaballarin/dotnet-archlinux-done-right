@@ -16,4 +16,4 @@ if test x"$1" = x--valgrind; then
   EXEC="valgrind $VALGRIND_OPTIONS"
 fi
 
-$EXEC /usr/bin/dotnet $DEBUG $MONO_OPTIONS /opt/dotnet/sdk/2*/FSharp/fsi.exe --exename:$(basename "$0") "$@"
+$EXEC /usr/bin/dotnet $DEBUG $MONO_OPTIONS /opt/dotnet/sdk/3*/FSharp/fsi.exe --exename:$(basename "$0") "$@"

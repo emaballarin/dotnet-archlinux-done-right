@@ -6,7 +6,7 @@
 
 pkgname=fsharp-bin-extra
 pkgver=4.5.0_10.2.3
-pkgrel=6
+pkgrel=7
 pkgdesc="The F# Compiler, Core Library & Tools (F# Software Foundation Repository)"
 arch=('any')
 url="http://fsharp.org/"
@@ -24,24 +24,26 @@ source=("fsharp-$pkgver.tar.gz::https://github.com/fsharp/fsharp/archive/10.2.3.
         "fsharpi"
         "fsharp-bin-extra.sh"
         )
-sha256sums=('71be24bd4bac47fcad3f9e544c17f23fea9ebce3b47082720804f3f9f1b08f16'
-            '41ad83eb4a9743753ece92745179764267ae5cf8263e32a273fc8c5cba561fd0'
+sha256sums=('SKIP'
+            'SKIP'
             '75f3d284ebf32fba7f96b1d536fcdc624d15a3e51ddcb3ae911aa0aca259b6da'
-            '7346376d0c0be4a41f37f6604ff9d3e404145c0c15330fa18783e768ed6da632'
-            'ce1678d2d7e24cc8f2b28bee96ee0d2047ca2c37ea81b7ccf3b08f706ff4a6c1'
+            'SKIP'
+            'SKIP'
             '87aba4217f7dfa3f5a589d0ff7366900d20412c67531d1d5851263587ac7e45b'
-            'e26ec0bf6ea6400563bdf1cc3452b73a70253e69bd658d8eecc9a4d4561985b1'
+            'SKIP'
             '65de76c84161de0d78fe22cd041432a80f51b183ae0f40a4dde0255ba23dc6b5'
             )
 
 build() {
-  cd "$srcdir/fsharp-$pkgver"
+  # Change version upon update (i.e. fsharp-****)
+  cd "$srcdir/fsharp-10.2.3"
   prefix=/usr
   make
 }
 
 package() {
-  cd "$srcdir/fsharp-$pkgver"
+  # Change version upon update (i.e. fsharp-****)
+  cd "$srcdir/fsharp-10.2.3"
   make prefix="/usr" DESTDIR="$pkgdir" install
   mv "$pkgdir/usr/bin/fsharpc" "$pkgdir/usr/bin/fsharpc-mono"
   mv "$pkgdir/usr/bin/fsharpi" "$pkgdir/usr/bin/fsharpi-mono"

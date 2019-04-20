@@ -4,7 +4,7 @@ EXEC="exec "
 # FSharp engine selection (set mono as default)
 if [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "dotnet" ]; then
   export FSHARP_ENGINE_EXECUTABLE="/usr/bin/dotnet"
-  export FSHARP_EXECUTABLE_FSI=/opt/dotnet/sdk/2*/FSharp/fsi.exe
+  export FSHARP_EXECUTABLE_FSI=/opt/dotnet/sdk/3*/FSharp/fsi.exe
 elif [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "mono" ]; then
   export FSHARP_ENGINE_EXECUTABLE="/usr/bin/mono"
   export FSHARP_EXECUTABLE_FSI="/usr/lib/mono/fsharp/fsi.exe"
