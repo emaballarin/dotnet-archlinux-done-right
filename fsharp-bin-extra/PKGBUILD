@@ -6,7 +6,7 @@
 
 pkgname=fsharp-bin-extra
 pkgver=4.5.0_10.2.3
-pkgrel=7
+pkgrel=8
 pkgdesc="The F# Compiler, Core Library & Tools (F# Software Foundation Repository)"
 arch=('any')
 url="http://fsharp.org/"
@@ -26,12 +26,12 @@ source=("fsharp-$pkgver.tar.gz::https://github.com/fsharp/fsharp/archive/10.2.3.
         )
 sha256sums=('SKIP'
             'SKIP'
-            '75f3d284ebf32fba7f96b1d536fcdc624d15a3e51ddcb3ae911aa0aca259b6da'
             'SKIP'
             'SKIP'
-            '87aba4217f7dfa3f5a589d0ff7366900d20412c67531d1d5851263587ac7e45b'
             'SKIP'
-            '65de76c84161de0d78fe22cd041432a80f51b183ae0f40a4dde0255ba23dc6b5'
+            'SKIP'
+            'SKIP'
+            'SKIP'
             )
 
 build() {

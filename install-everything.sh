@@ -12,7 +12,7 @@ cd ../
 
 echo ' '
 cd ./msbuild-stable-bin
-makepkg -Cfsi
+makepkg -Cfsi --force
 cd ../
 
 echo ' '
