@@ -12,7 +12,8 @@ cd ../
 
 echo ' '
 cd ./msbuild-stable-bin
-makepkg -Cfsi --force
+#makepkg -Cfsi --force
+sudo pacman -U ./*.pkg*
 cd ../
 
 echo ' '
