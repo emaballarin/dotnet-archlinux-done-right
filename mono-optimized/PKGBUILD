@@ -5,8 +5,8 @@
 # Contributor: Brice Carpentier <brice@dlfp.org>
 
 pkgname=mono-optimized
-_gitcommit=9d7bbcffa7505c81a27db41ca1ffe8293c41dd41
-pkgver=6.0.0.313
+_gitcommit=52203786470625de10c97d10b8acbd8d725647cf
+pkgver=6.0.0.319
 pkgrel=1
 pkgdesc='Free implementation of the .NET platform including runtime and compiler'
 url='http://www.mono-project.com/'
@@ -14,8 +14,8 @@ arch=('x86_64')
 license=('GPL' 'LGPL2.1' 'MPL')
 depends=('zlib' 'libgdiplus>=4.2' 'sh' 'python' 'ca-certificates')
 makedepends=('cmake' 'git')
-provides=('monodoc' 'mono=5.20.1.19' 'mono=6.0.0.313' 'mono-bin=5.20.1.19' 'mono-bin=6.0.0.313')
-conflicts=('monodoc' 'mono=5.20.1.19' 'mono=6.0.0.313' 'mono-bin=5.20.1.19' 'mono-bin=6.0.0.313')
+provides=('monodoc' 'mono=5.20.1.34' 'mono=6.0.0.319' 'mono-bin=5.20.1.34' 'mono-bin=6.0.0.319')
+conflicts=('monodoc' 'mono=5.20.1.34' 'mono=6.0.0.319' 'mono-bin=5.20.1.34' 'mono-bin=6.0.0.319')
 install=mono-optimized.install
 source=(mono::"git+https://github.com/mono/mono#commit=${_gitcommit}"
         git+https://github.com/mono/aspnetwebstack

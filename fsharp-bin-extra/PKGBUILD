@@ -6,7 +6,7 @@
 
 pkgname=fsharp-bin-extra
 pkgver=4.5.0_10.2.3
-pkgrel=9
+pkgrel=10
 pkgdesc="The F# Compiler, Core Library & Tools (F# Software Foundation Repository)"
 arch=('any')
 url="http://fsharp.org/"
