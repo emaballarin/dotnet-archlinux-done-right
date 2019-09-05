@@ -2,9 +2,10 @@
 # Contributor: jtmb <packaging at technologicalwizardry dot com>
 
 pkgname=msbuild-stable-bin-sideload
-_pkgver=16.3+xamarinxplat.2019.07.26.14.57-0xamarin7+ubuntu1804b1
+16.3+xamarinxplat.2019.08.08.00.55-
+_pkgver=16.3+xamarinxplat.2019.08.08.00.55-0xamarin2+ubuntu1804b1
 pkgver=${_pkgver//[+-]/_}
-pkgrel=2
+pkgrel=4
 pkgdesc="Xamarin implementation of the Microsoft build system"
 arch=('x86_64')
 depends=('mono>=5.0.0')

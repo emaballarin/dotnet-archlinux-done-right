@@ -3,8 +3,9 @@
 # Forked from https://aur.archlinux.org/packages/nuget3/
 
 pkgname=nuget-bin
-pkgver=5.2.0
-pkgrel=2
+pkgver=5.3.0_preview3
+_pkgver=5.3.0-preview3
+pkgrel=1
 pkgdesc="Package manager for .NET."
 arch=('any')
 url="http://www.nuget.org"
@@ -12,7 +13,7 @@ license=('APACHE')
 depends=('mono>=5.0.0' 'sh')
 provides=('nuget' 'nuget4' 'nuget5')
 conflicts=('nuget' 'nuget3' 'nuget4' 'nuget5')
-source=(https://dist.nuget.org/win-x86-commandline/v${pkgver}/nuget.exe
+source=(https://dist.nuget.org/win-x86-commandline/v${_pkgver}/nuget.exe
 		'nuget')
 install="${pkgname}.install"
 sha384sums=('SKIP'
