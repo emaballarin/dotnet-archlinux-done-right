@@ -3,8 +3,8 @@
 # Forked from https://aur.archlinux.org/packages/nuget3/
 
 pkgname=nuget-bin
-pkgver=5.3.0_preview3
-_pkgver=5.3.0-preview3
+pkgver=5.3.0
+_pkgver=5.3.0
 pkgrel=1
 pkgdesc="Package manager for .NET."
 arch=('any')
