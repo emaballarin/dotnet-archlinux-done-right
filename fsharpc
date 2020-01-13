@@ -1,0 +1,31 @@
+#!/bin/sh
+EXEC="exec "
+
+# FSharp engine selection (set mono as default)
+if [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "dotnet" ]; then
+  export FSHARP_ENGINE_EXECUTABLE="/usr/bin/dotnet"
+  export FSHARP_EXECUTABLE_FSC=/opt/dotnet/sdk/3*/FSharp/fsc.exe
+elif [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "mono" ]; then
+  export FSHARP_ENGINE_EXECUTABLE="/usr/bin/mono"
+  export FSHARP_EXECUTABLE_FSC="/usr/lib/mono/fsharp/fsc.exe"
+else
+  echo "FATAL ERROR! Check that the environment variables FSHARP_ENGINE_EXECUTABLE and FSHARP_EXECUTABLE are correctly set."
+  exit
+fi
+
+if test x"$1" = x--debug; then
+   DEBUG=--debug
+   shift
+fi
+
+if test x"$1" = x--gdb; then
+   shift
+   EXEC="gdb --eval-command=run --args "
+fi
+
+if test x"$1" = x--valgrind; then
+  shift
+  EXEC="valgrind $VALGRIND_OPTIONS"
+fi
+
+$EXEC $FSHARP_ENGINE_EXECUTABLE $DEBUG $MONO_OPTIONS $FSHARP_EXECUTABLE_FSC --exename:$(basename "$0") "$@"
