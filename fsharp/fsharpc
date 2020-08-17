@@ -4,10 +4,10 @@ EXEC="exec "
 # FSharp engine selection (set mono as default)
 if [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "dotnet" ]; then
   export FSHARP_ENGINE_EXECUTABLE="/usr/bin/dotnet"
-  export FSHARP_EXECUTABLE_FSI=/opt/dotnet/sdk/3*/FSharp/fsi.exe
+  export FSHARP_EXECUTABLE_FSC=/opt/dotnet/sdk/5*/FSharp/fsc.exe
 elif [ "${FSHARP_DEFAULT_ENGINE:-mono}" = "mono" ]; then
   export FSHARP_ENGINE_EXECUTABLE="/usr/bin/mono"
-  export FSHARP_EXECUTABLE_FSI="/usr/lib/mono/fsharp/fsi.exe"
+  export FSHARP_EXECUTABLE_FSC="/usr/lib/mono/fsharp/fsc.exe"
 else
   echo "FATAL ERROR! Check that the environment variables FSHARP_ENGINE_EXECUTABLE and FSHARP_EXECUTABLE are correctly set."
   exit
@@ -28,4 +28,4 @@ if test x"$1" = x--valgrind; then
   EXEC="valgrind $VALGRIND_OPTIONS"
 fi
 
-$EXEC $FSHARP_ENGINE_EXECUTABLE $DEBUG $MONO_OPTIONS $FSHARP_EXECUTABLE_FSI --exename:$(basename "$0") "$@"
+$EXEC $FSHARP_ENGINE_EXECUTABLE $DEBUG $MONO_OPTIONS $FSHARP_EXECUTABLE_FSC --exename:$(basename "$0") "$@"
